@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2027 해외 비전트립 · 우간다 & 터키</title>
+<meta name="description" content="2027년 2월, 고등부 해외 비전트립 — 아프리카 우간다와 터키. 하나님의 위대하심을 자연에서, 첫마음의 회복을 예배에서, 인생의 방향을 사역 현장에서 마주하는 12일." />
+<meta property="og:title" content="2027 해외 비전트립 · 우간다 & 터키" />
+<meta property="og:description" content="2027년 2월 15일 ~ 26일 · 현 고1-2 + 중3 대상 · 선착순 모집" />
+<meta property="og:image" content="images/09-savanna-sunset.jpg" />
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --paper: #fafaf7;
+    --line: #e5e2d8;
+    --accent: #b8511a;
+    --accent-soft: #e8d5c4;
+    --sky: #2d5f7c;
+    --dark: #1e1a15;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    background:
+      linear-gradient(180deg, rgba(30,26,21,0.35) 0%, rgba(30,26,21,0.75) 100%),
+      url('images/09-savanna-sunset.jpg') center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .hero .badge {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    padding: 7px 16px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 999px;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .hero h1 .country {
+    display: block;
+    font-size: 62px;
+    background: linear-gradient(135deg, #ffbf80 0%, #ffdcb0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 6px;
+  }
+  .hero .subtitle {
+    font-size: 17px;
+    opacity: 0.95;
+    margin-bottom: 32px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .hero .key-info {
+    display: inline-flex;
+    gap: 28px;
+    padding: 16px 26px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero .cta {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 38px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: transform 0.15s, background 0.15s;
+  }
+  .hero .cta:hover { background: #963f0d; transform: translateY(-2px); }
+  .hero .scroll-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    opacity: 0.6;
+    letter-spacing: 2px;
+  }
+
+  /* SECTION */
+  section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  section h2::before {
+    content: "";
+    width: 4px; height: 24px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+  section .lead {
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    font-size: 15px;
+  }
+
+  /* MAIN GALLERY */
+  .gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 8px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .gallery .cell {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .gallery .cell:nth-child(1) {
+    grid-row: 1 / 3;
+    background-image: url('images/11-group-jinja.jpg');
+  }
+  .gallery .cell:nth-child(2) { background-image: url('images/03-sipi-falls.jpg'); }
+  .gallery .cell:nth-child(3) { background-image: url('images/08-lion.jpg'); }
+  .gallery .cell:nth-child(4) { background-image: url('images/05-giving-gifts.jpg'); }
+  .gallery .cell:nth-child(5) { background-image: url('images/30-hagia-sophia.jpg'); }
+  .gallery .cell::after {
+    content: attr(data-caption);
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    background: linear-gradient(0deg, rgba(0,0,0,0.5), transparent);
+    padding-top: 40px;
+    pointer-events: none;
+  }
+
+  /* OVERVIEW GRID */
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .overview .card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .overview .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .overview .card .label {
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .overview .card .value {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .overview .card .note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+
+  /* TIMELINE */
+  .timeline { list-style: none; }
+  .timeline li {
+    padding: 20px 0 20px 36px;
+    border-bottom: 1px dashed var(--line);
+    position: relative;
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 28px;
+    width: 12px; height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(184,81,26,0.15);
+  }
+  .timeline li strong { display: block; font-size: 16px; margin-bottom: 4px; }
+  .timeline li span { color: var(--ink-soft); font-size: 14px; }
+
+  /* EXPECT */
+  .expect {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .expect .item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .expect .item .photo {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+  }
+  .expect .item .body { padding: 22px; }
+  .expect .item .tag {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+  .expect .item h3 { font-size: 17px; margin-bottom: 8px; }
+  .expect .item p { font-size: 14px; color: var(--ink-soft); }
+
+  /* MOSAIC */
+  .mosaic {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+  .mosaic img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s;
+  }
+  .mosaic img:hover { transform: scale(1.03); }
+
+  /* VIDEOS */
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .video-wrap video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* FORM */
+  .form-section { background: linear-gradient(180deg, #f4ede1 0%, #ede4d0 100%); }
+  form { background: white; padding: 36px; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 8px 32px rgba(0,0,0,0.04); }
+  .field { margin-bottom: 18px; }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .field label .req { color: var(--accent); }
+  .field input, .field textarea, .field select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: var(--paper);
+    transition: border-color 0.15s;
+  }
+  .field input:focus, .field textarea:focus, .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: white;
+  }
+  .field textarea { resize: vertical; min-height: 90px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field-group {
+    padding: 20px;
+    background: var(--paper);
+    border-radius: 10px;
+    margin-bottom: 18px;
+  }
+  .field-group .group-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sky);
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+  .checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .checkbox input { width: auto; margin-top: 3px; }
+  button[type="submit"] {
+    width: 100%;
+    padding: 17px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.15s;
+  }
+  button[type="submit"]:hover { background: #963f0d; }
+
+  /* FOOTER */
+  footer {
+    padding: 48px 0;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 13px;
+    background: var(--dark);
+    color: rgba(255,255,255,0.7);
+  }
+  footer .verse {
+    font-style: italic;
+    color: #ffbf80;
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { min-height: 100vh; }
+    .hero h1 { font-size: 32px; }
+    .hero h1 .country { font-size: 44px; }
+    .hero .subtitle { font-size: 15px; }
+    .hero .key-info { flex-direction: column; gap: 8px; text-align: left; padding: 14px 18px; }
+    section { padding: 52px 0; }
+    section h2 { font-size: 21px; }
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 160px 160px 160px;
+    }
+    .gallery .cell:nth-child(1) { grid-column: 1 / 3; grid-row: 1; }
+    .gallery .cell:nth-child(2) { grid-row: 2; }
+    .gallery .cell:nth-child(3) { grid-row: 2; }
+    .gallery .cell:nth-child(4) { grid-row: 3; }
+    .gallery .cell:nth-child(5) { grid-row: 3; }
+    .overview, .expect { grid-template-columns: 1fr; }
+    .field-row { grid-template-columns: 1fr; }
+    form { padding: 22px; }
+    .mosaic { grid-template-columns: repeat(3, 1fr); }
+    .mosaic img { height: 100px; }
+    .videos { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <span class="badge">VISION TRIP · FEB 2027</span>
+    <h1>
+      고등부 해외 비전트립
+      <span class="country">우간다 · 터키</span>
+    </h1>
+    <p class="subtitle">
+      하나님의 위대하심을 대자연에서,<br>
+      첫마음의 회복을 예배에서,<br>
+      인생의 방향을 사역 현장에서 마주하는 12일
+    </p>
+    <div class="key-info">
+      <span><strong>27.02.15(월) ~ 02.26(금)</strong></span>
+      <span>선착순 모집</span>
+      <span>최대 17명</span>
+    </div>
+    <br>
+    <a href="#apply" class="cta">신청하러 가기 →</a>
+  </div>
+  <div class="scroll-hint">SCROLL ↓</div>
+</div>
+
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <h2>현장의 순간들</h2>
+    <p class="lead">전임 답사에서 담아온 우간다와 터키의 실제 풍경입니다.</p>
+    <div class="gallery">
+      <div class="cell" data-caption="함께 · 나일강 근원 (진자)"></div>
+      <div class="cell" data-caption="시피 폭포 · 하나님의 창조"></div>
+      <div class="cell" data-caption="사파리 · 야생의 장엄함"></div>
+      <div class="cell" data-caption="현지 아이들과의 만남"></div>
+      <div class="cell" data-caption="터키 · 하기아 소피아"></div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section>
+  <div class="container">
+    <h2>트립 개요</h2>
+    <div class="overview">
+      <div class="card">
+        <div class="label">DATE · 일정</div>
+        <div class="value">2027. 2. 15(월) ~ 2. 26(금)</div>
+        <div class="note">* 세부 일정은 변동될 수 있습니다</div>
+      </div>
+      <div class="card">
+        <div class="label">PLACE · 장소</div>
+        <div class="value">아프리카 우간다 · 터키</div>
+        <div class="note">연결 선교사: 이상덕 선교사님 (파송)</div>
+      </div>
+      <div class="card">
+        <div class="label">COST · 예상 비용</div>
+        <div class="value">450 ~ 500만원</div>
+        <div class="note">항공권·현지비 포함 추정</div>
+      </div>
+      <div class="card">
+        <div class="label">WHO · 모집 대상</div>
+        <div class="value">현 고1 · 고2 + 중3</div>
+        <div class="note">학생 10~12명 · 선착순</div>
+      </div>
+      <div class="card">
+        <div class="label">TEAM · 인솔</div>
+        <div class="value">교역자 1 · 교사 1~2</div>
+        <div class="note">전체 진행 및 코스 활동 인솔자: 가이드</div>
+      </div>
+      <div class="card">
+        <div class="label">MAX · 최대 인원</div>
+        <div class="value">17명</div>
+        <div class="note">모집 완료 시 조기 마감</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section>
+  <div class="container">
+    <h2>진행 과정</h2>
+    <ul class="timeline">
+      <li>
+        <strong>9월 16일 (오늘) · 모집 시작</strong>
+        <span>선착순 신청 · 현 고1-2 + 중3 대상</span>
+      </li>
+      <li>
+        <strong>10월 초 · 티켓팅</strong>
+        <span>모집 완료 시 곧장 시작합니다</span>
+      </li>
+      <li>
+        <strong>전도 축제 이후 · 훈련 및 모임 시작</strong>
+        <span>파송 전 영적 준비의 시간</span>
+      </li>
+      <li>
+        <strong>2027. 2. 15 · 출발</strong>
+        <span>12일간의 여정 시작</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPECT -->
+<section>
+  <div class="container">
+    <h2>이 여정에서 만나는 것</h2>
+    <p class="lead">단순한 여행이 아닌, 인생을 새로 정의하는 네 번의 만남입니다.</p>
+    <div class="expect">
+      <div class="item">
+        <div class="photo" style="background-image:url('images/32-bayezid-mosque.jpg');"></div>
+        <div class="body">
+          <span class="tag">TURKEY</span>
+          <h3>역사와 문화를 통한 배움</h3>
+          <p>초대교회의 자리, 문명의 교차점 위에서 신앙의 뿌리를 새로 만납니다.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="photo" style="background-image:url('images/05-giving-gifts.jpg');"></div>
+        <div class="body">
+          <span class="tag">WORSHIP</span>
+          <h3>첫마음의 회복과 감사</h3>
+          <p>현지인들과의 교제·섬김·가정 방문. 예배 앞에서 잃어버린 첫마음을 되찾습니다.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="photo" style="background-image:url('images/03-sipi-falls.jpg');"></div>
+        <div class="body">
+          <span class="tag">CREATION</span>
+          <h3>하나님의 위대하심</h3>
+          <p>나일강의 근원, 빅토리아 호수, 사파리, 트레킹. 대자연 안에서 창조주를 확인합니다.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="photo" style="background-image:url('images/20-boy-village.jpg');"></div>
+        <div class="body">
+          <span class="tag">CALLING</span>
+          <h3>인생의 방향에 대한 고민</h3>
+          <p>영국 NGO 사업 현장과 신학교 방문. "나는 무엇을 위해 살 것인가"를 마주합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOSAIC -->
+<section>
+  <div class="container">
+    <h2>더 많은 이야기</h2>
+    <p class="lead">사람, 자연, 음식, 일상 — 우간다의 결을 담은 순간들.</p>
+    <div class="mosaic">
+      <img src="images/02-sunset-hills.jpg" alt="우간다 언덕 위 노을" loading="lazy" />
+      <img src="images/10-victoria-sunset.jpg" alt="빅토리아 호수 어부" loading="lazy" />
+      <img src="images/06-giraffe.jpg" alt="기린" loading="lazy" />
+      <img src="images/19-elephant.jpg" alt="코끼리와 얼룩말" loading="lazy" />
+      <img src="images/07-nile-falls.jpg" alt="나일강 폭포" loading="lazy" />
+      <img src="images/13-rhino-selfie.jpg" alt="코뿔소" loading="lazy" />
+      <img src="images/04-child-snack.jpg" alt="아이" loading="lazy" />
+      <img src="images/17-soccer.jpg" alt="현지인들과 축구" loading="lazy" />
+      <img src="images/25-canyon-falls.jpg" alt="협곡 폭포" loading="lazy" />
+      <img src="images/23-boat.jpg" alt="보트" loading="lazy" />
+      <img src="images/29-safari-highfive.jpg" alt="사파리" loading="lazy" />
+      <img src="images/15-art-gallery.jpg" alt="현지 예술" loading="lazy" />
+      <img src="images/21-pool-mountain.jpg" alt="산을 배경으로" loading="lazy" />
+      <img src="images/26-grilled-chicken.jpg" alt="구운 닭" loading="lazy" />
+      <img src="images/33-hagia-sophia2.jpg" alt="터키 하기아 소피아" loading="lazy" />
+      <img src="images/31-grand-bazaar.jpg" alt="이스탄불 그랜드 바자르" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section>
+  <div class="container">
+    <h2>영상으로 보는 현장</h2>
+    <p class="lead">답사 중 담아온 짧은 영상 클립입니다.</p>
+    <div class="videos">
+      <div class="video-wrap">
+        <video controls preload="metadata" playsinline>
+          <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="metadata" playsinline>
+          <source src="videos/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="metadata" playsinline>
+          <source src="videos/video3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="apply">
+  <div class="container">
+    <h2>신청서</h2>
+    <p class="lead">
+      선착순 모집입니다. 아래 신청서를 작성해 주시면 담당 목사에게 바로 전달됩니다.
+    </p>
+
+    <!-- ⚠️ Formspree 설정: action의 YOUR_FORM_ID를 발급받은 ID로 교체하세요.
+         발급 방법은 함께 드린 README.md 파일을 확인해 주세요. -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="[비전트립 27] 새로운 신청서가 접수되었습니다" />
+
+      <!-- 학생 정보 -->
+      <div class="field-group">
+        <div class="group-title">🎓 학생 정보</div>
+        <div class="field-row">
+          <div class="field">
+            <label>이름 <span class="req">*</span></label>
+            <input type="text" name="이름" required />
+          </div>
+          <div class="field">
+            <label>학년 <span class="req">*</span></label>
+            <select name="학년" required>
+              <option value="">선택</option>
+              <option>중3</option>
+              <option>고1</option>
+              <option>고2</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>연락처(휴대폰) <span class="req">*</span></label>
+            <input type="tel" name="연락처" placeholder="010-0000-0000" required />
+          </div>
+          <div class="field">
+            <label>이메일 <span class="req">*</span></label>
+            <input type="email" name="이메일" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- 보호자 정보 -->
+      <div class="field-group">
+        <div class="group-title">👨‍👩‍👧 보호자 정보</div>
+        <div class="field-row">
+          <div class="field">
+            <label>보호자 이름 <span class="req">*</span></label>
+            <input type="text" name="보호자_이름" required />
+          </div>
+          <div class="field">
+            <label>보호자 연락처 <span class="req">*</span></label>
+            <input type="tel" name="보호자_연락처" required />
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="보호자_동의" value="동의함" required id="agree" />
+          <label for="agree">보호자로서 자녀의 27년 2월 우간다·터키 비전트립 참가에 동의하며, 사전 훈련·모임 참석이 필요함을 확인합니다.</label>
+        </div>
+      </div>
+
+      <!-- 여권 정보 -->
+      <div class="field-group">
+        <div class="group-title">📘 여권 정보 (미소지 시 "미소지"로 표기)</div>
+        <div class="field-row">
+          <div class="field">
+            <label>여권 번호</label>
+            <input type="text" name="여권_번호" placeholder="M12345678 또는 미소지" />
+          </div>
+          <div class="field">
+            <label>여권 유효기간</label>
+            <input type="text" name="여권_유효기간" placeholder="YYYY-MM-DD" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 지원 동기 -->
+      <div class="field-group">
+        <div class="group-title">🙏 영적 준비</div>
+        <div class="field">
+          <label>지원 동기 <span class="req">*</span></label>
+          <textarea name="지원_동기" placeholder="이 비전트립을 왜 가고 싶은지 자유롭게 적어주세요." required></textarea>
+        </div>
+        <div class="field" style="margin-bottom:0;">
+          <label>기도제목</label>
+          <textarea name="기도제목" placeholder="이 여정을 위해 함께 기도할 제목이 있다면 나눠주세요."></textarea>
+        </div>
+      </div>
+
+      <button type="submit">신청서 제출하기</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="verse">"땅 끝까지 이르러 내 증인이 되리라" — 사도행전 1:8</div>
+    <div>문의 · 담당 목사 조창민</div>
+    <div style="margin-top:6px;">📧 jcm7163@naver.com</div>
+    <div style="margin-top:14px; font-size:11px; opacity:0.5;">© 2027 Vision Trip · Uganda & Türkiye</div>
+  </div>
+</footer>
+
+</body>
+</html>
