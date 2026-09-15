@@ -310,6 +310,40 @@
   /* FORM */
   .form-section { background: linear-gradient(180deg, #f4ede1 0%, #ede4d0 100%); }
   form { background: white; padding: 36px; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 8px 32px rgba(0,0,0,0.04); }
+
+  /* ROLE PICKER */
+  .role-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .role-option input { position: absolute; opacity: 0; pointer-events: none; }
+  .role-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px;
+    background: var(--paper);
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: center;
+  }
+  .role-box:hover { border-color: var(--accent-soft); }
+  .role-option input:checked + .role-box {
+    border-color: var(--accent);
+    background: #fff5ee;
+    box-shadow: 0 4px 12px rgba(184,81,26,0.12);
+  }
+  .role-emoji { font-size: 28px; margin-bottom: 6px; }
+  .role-label { font-size: 15px; font-weight: 700; }
+  .role-sub { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+
+  /* CONDITIONAL VISIBILITY */
+  #applyForm.mode-teacher .student-only { display: none; }
+  #applyForm:not(.mode-teacher) .teacher-only { display: none; }
   .field { margin-bottom: 18px; }
   .field label {
     display: block;
@@ -624,27 +658,49 @@
       선착순 모집입니다. 아래 신청서를 작성해 주시면 담당 목사에게 바로 전달됩니다.
     </p>
 
-    <!-- ⚠️ Formspree 설정: action의 YOUR_FORM_ID를 발급받은 ID로 교체하세요.
-         발급 방법은 함께 드린 README.md 파일을 확인해 주세요. -->
-    <form action="https://formspree.io/f/xnpnazlg" method="POST">
+    <form action="https://formspree.io/f/xnpnazlg" method="POST" id="applyForm">
       <input type="hidden" name="_subject" value="[비전트립 27] 새로운 신청서가 접수되었습니다" />
 
-      <!-- 학생 정보 -->
+      <!-- 지원 유형 선택 -->
+      <div class="role-picker">
+        <label class="role-option">
+          <input type="radio" name="지원_유형" value="학생" checked />
+          <span class="role-box">
+            <span class="role-emoji">🎓</span>
+            <span class="role-label">학생으로 지원</span>
+            <span class="role-sub">현 고1·2 또는 중3</span>
+          </span>
+        </label>
+        <label class="role-option">
+          <input type="radio" name="지원_유형" value="교사" />
+          <span class="role-box">
+            <span class="role-emoji">🙋</span>
+            <span class="role-label">교사로 지원</span>
+            <span class="role-sub">인솔 교사·교역자</span>
+          </span>
+        </label>
+      </div>
+
+      <!-- 기본 정보 -->
       <div class="field-group">
-        <div class="group-title">🎓 학생 정보</div>
+        <div class="group-title"><span class="student-only">🎓 학생 정보</span><span class="teacher-only">🙋 교사 정보</span></div>
         <div class="field-row">
           <div class="field">
             <label>이름 <span class="req">*</span></label>
             <input type="text" name="이름" required />
           </div>
-          <div class="field">
+          <div class="field student-only">
             <label>학년 <span class="req">*</span></label>
-            <select name="학년" required>
+            <select name="학년" data-role-required="학생">
               <option value="">선택</option>
               <option>중3</option>
               <option>고1</option>
               <option>고2</option>
             </select>
+          </div>
+          <div class="field teacher-only">
+            <label>담당 / 직분 <span class="req">*</span></label>
+            <input type="text" name="담당_직분" placeholder="예: 고2 교사 / 청년부 전도사" data-role-required="교사" />
           </div>
         </div>
         <div class="field-row">
@@ -659,21 +715,21 @@
         </div>
       </div>
 
-      <!-- 보호자 정보 -->
-      <div class="field-group">
+      <!-- 보호자 정보 (학생만) -->
+      <div class="field-group student-only">
         <div class="group-title">👨‍👩‍👧 보호자 정보</div>
         <div class="field-row">
           <div class="field">
             <label>보호자 이름 <span class="req">*</span></label>
-            <input type="text" name="보호자_이름" required />
+            <input type="text" name="보호자_이름" data-role-required="학생" />
           </div>
           <div class="field">
             <label>보호자 연락처 <span class="req">*</span></label>
-            <input type="tel" name="보호자_연락처" required />
+            <input type="tel" name="보호자_연락처" data-role-required="학생" />
           </div>
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="보호자_동의" value="동의함" required id="agree" />
+          <input type="checkbox" name="보호자_동의" value="동의함" data-role-required="학생" id="agree" />
           <label for="agree">보호자로서 자녀의 27년 2월 우간다·터키 비전트립 참가에 동의하며, 사전 훈련·모임 참석이 필요함을 확인합니다.</label>
         </div>
       </div>
@@ -720,5 +776,21 @@
   </div>
 </footer>
 
+<script>
+(function() {
+  const form = document.getElementById('applyForm');
+  const radios = form.querySelectorAll('input[name="지원_유형"]');
+  function updateMode() {
+    const role = form.querySelector('input[name="지원_유형"]:checked').value;
+    form.classList.toggle('mode-teacher', role === '교사');
+    // 역할별 필수 처리: 보이는 필드만 required로 활성화
+    form.querySelectorAll('[data-role-required]').forEach(el => {
+      el.required = (el.dataset.roleRequired === role);
+    });
+  }
+  radios.forEach(r => r.addEventListener('change', updateMode));
+  updateMode();
+})();
+</script>
 </body>
 </html>
