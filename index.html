@@ -385,15 +385,37 @@
   .checkbox {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    padding: 14px;
-    background: white;
-    border-radius: 6px;
+    gap: 14px;
+    padding: 18px 20px;
+    background: #fff5ee;
+    border: 2px solid var(--accent-soft);
+    border-radius: 10px;
     margin-bottom: 16px;
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.6;
+    cursor: pointer;
+    transition: all 0.15s;
   }
-  .checkbox input { width: auto; margin-top: 3px; }
+  .checkbox:hover { border-color: var(--accent); background: #ffede0; }
+  .checkbox input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    margin: 0;
+    margin-top: 1px;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+  .checkbox label {
+    cursor: pointer;
+    margin: 0;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .checkbox:has(input:checked) {
+    background: #ffe4cc;
+    border-color: var(--accent);
+  }
   button[type="submit"] {
     width: 100%;
     padding: 17px;
